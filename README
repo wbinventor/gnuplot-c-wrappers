@@ -6,22 +6,22 @@ free to use, distribute and contribute!
 
 
 ===============================================================================
-						Build as a static library
+                         Build as a static library
 ===============================================================================
 
 To compile these functions as a static library which you can then link to
 any C++ project, execute the following bash commands from within the source
 code directory:
 
-g++ -c -o gplotwrappers gnuplot.cpp
-ar -cvq libgplot.a gplotwrappers
+g++ -c -o gplotwrappers.o gnuplot.cpp
+ar -cvq libgplot.a gplotwrappers.o
 
 That's all there is to it! You should now be ready to include and link the 
 library in any C++ source code you wish.
 
 
 ===============================================================================
-						Link to your project
+                            Link to your project
 ===============================================================================
 
 To link to the static library libgplot which you created above, you simply 
