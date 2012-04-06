@@ -1,0 +1,1 @@
+This repository is a module used to call gnuplot directly from within C/C++ source code. This project is beginning with only a rudimentary set of function calls but I hope to expand upon them with time and eventually have a fully functioning library of C/C++ wrapper calls to gnuplot. Please feel free to use, distribute and contribute!
