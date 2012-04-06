@@ -1,1 +1,43 @@
-This repository is a module used to call gnuplot directly from within C/C++ source code. This project is beginning with only a rudimentary set of function calls but I hope to expand upon them with time and eventually have a fully functioning library of C/C++ wrapper calls to gnuplot. Please feel free to use, distribute and contribute!
+This repository is a module used to call gnuplot directly from within C++ 
+source code. This project is beginning with only a rudimentary set of 
+function calls but I hope to expand upon them with time and eventually have 
+a fully functioning library of C++ wrapper calls to gnuplot. Please feel 
+free to use, distribute and contribute!
+
+
+===============================================================================
+						Build as a static library
+===============================================================================
+
+To compile these functions as a static library which you can then link to
+any C++ project, execute the following bash commands from within the source
+code directory:
+
+g++ -c -o gplotwrappers gnuplot.cpp
+ar -cvq libgplot.a gplotwrappers
+
+That's all there is to it! You should now be ready to include and link the 
+library in any C++ source code you wish.
+
+
+===============================================================================
+						Link to your project
+===============================================================================
+
+To link to the static library libgplot which you created above, you simply 
+need to do the following two things:
+
+1) Include the library's header file in each source file which will use the 
+function calls:
+
+#include "gnuplot.h"
+
+2) To compile source files which use the library, include the path to the 
+library in your makefile for each of the source files which use the library:
+
+-I"/{path to the directory}/gnuplot-c-wrappers"
+
+3) To link source files  which use the library, include the linker flag 
+"-lgplot" along with the path to the library in your makefile:
+
+-L"/{path to the directory}/gnuplot-c-wrappers"

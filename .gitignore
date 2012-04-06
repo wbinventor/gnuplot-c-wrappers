@@ -6,6 +6,7 @@ Debug/
 Release/
 *.d
 *.o
+*.a
 *.out
 .cproject
 .project
